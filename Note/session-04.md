@@ -22,3 +22,8 @@
     module.exports = player;
 // );
 ```
+
+- Three type module
+  1. Core Module (node js)
+  2. NPM Module
+  3. Build Module (We build in application)
