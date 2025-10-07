@@ -2,11 +2,14 @@ const dns = require('dns');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
+const _ = require('lodash');
+
+// console.log(_.last([1, 2, 3, 4, 5, 6]));
 
 const mypath = '/home/uysys/Developement/node-js-tutorial/index.js';
 // console.log(path.extname(mypath));
 // console.log(os.freemem());
-// console.log(os.cpus());
+console.log(os.cpus());
 
 // file write
 // synchronous not recommended
