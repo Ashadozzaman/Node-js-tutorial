@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <%- include("../partials/_head") %>
+  <body>
+    <%- include("../partials/_header") %>
+    <main
+      class="p-4 text-center bg-gray-100 flex flex-col items-center justify-center"
+    >
+      <h1 class="text-3xl font-bold mb-4">Register Your Home Here</h1>
+      <form class="w-1/3" action="/host/add-home" method="POST">
+        <div class="flex gap-3 mb-4">
+          <label class="w-[30%]" for="home-name">Home Name:</label>
+          <input
+            class="border border-gray-300 p-2 rounded"
+            type="text"
+            id="home-name"
+            name="home_name"
+            required
+          />
+        </div>
+        <div class="flex gap-3 mb-4">
+          <label class="w-[30%]" for="location">Location:</label>
+          <input
+            class="border border-gray-300 p-2 rounded"
+            type="text"
+            id="location"
+            name="location"
+            required
+          />
+        </div>
+        <div class="flex gap-3 mb-4">
+          <label class="w-[30%]" for="price">Price per Night:</label>
+          <input
+            class="border border-gray-300 p-2 rounded"
+            type="number"
+            id="price"
+            name="price_per_night"
+            required
+          />
+        </div>
+        <div class="flex gap-3 mb-4">
+          <label class="w-[30%]" for="image">Image:</label>
+          <input
+            class="border border-gray-300 p-2 rounded"
+            type="text"
+            id="image"
+            name="image_url"
+          />
+        </div>
+        <div class="flex gap-3 mb-4 justify-center">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            type="submit"
+          >
+            Add Home
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

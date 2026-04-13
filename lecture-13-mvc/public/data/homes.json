@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Khan",
+    "address": "Dhaka",
+    "price": "12",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/023/309/311/small/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg"
+  },
+  {
+    "name": "Gurden Billa",
+    "address": "Danmondi",
+    "price": "45",
+    "image": "https://t4.ftcdn.net/jpg/02/00/70/91/240_F_200709126_Q3YEXBXK0VdY4L9WKg1DbF9uIjTFZRdp.jpg"
+  },
+  {
+    "name": "Tube Billa",
+    "address": "Badda",
+    "price": "123",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/023/309/311/small/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg"
+  },
+  {
+    "name": "Khan",
+    "address": "North Badda, Dhaka",
+    "price": "23",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/023/309/311/small/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg"
+  },
+  {
+    "name": "TW Billa",
+    "address": "Uttara",
+    "price": "123",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/023/309/311/small/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg"
+  }
+]
