@@ -1,0 +1,35 @@
+<header class="main-header bg-purple-300 text-gray p-4">
+  <h1 class="text-2xl font-bold">
+    <a href="/">Airbnb</a>
+  </h1>
+  <!-- active url should be highlighted in the nav bar -->
+  <nav>
+    <ul class="flex justify-center gap-3">
+      <li
+        class="p-1 hover:bg-gray-200 border border-gray-300 rounded-lg <%= title === 'Home Page' ? 'bg-gray-200' : '' %>"
+      >
+        <a href="/home">Home</a>
+      </li>
+      <li
+        class="p-1 hover:bg-gray-200 border border-gray-300 rounded-lg <%= title === 'Add Home' ? 'bg-gray-200' : '' %>"
+      >
+        <a href="/host/add-home">Add Home</a>
+      </li>
+      <li
+        class="p-1 hover:bg-gray-200 border border-gray-300 rounded-lg <%= title === 'Booking Page' ? 'bg-gray-200' : '' %>"
+      >
+        <a href="/booking">Bookings</a>
+      </li>
+      <li
+        class="p-1 hover:bg-gray-200 border border-gray-300 rounded-lg <%= title === 'Favourites Page' ? 'bg-gray-200' : '' %>"
+      >
+        <a href="/favourites">Favourite List</a>
+      </li>
+      <li
+        class="p-1 hover:bg-gray-200 border border-gray-300 rounded-lg <%= title === 'Hosts Home List' ? 'bg-gray-200' : '' %>"
+      >
+        <a href="/host/home-list">Hosts</a>
+      </li>
+    </ul>
+  </nav>
+</header>
