@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <%- include("../partials/_head") %>
+  <body>
+    <%- include("../partials/_header") %>
+    <!-- login page design here -->
+    <main
+      class="p-4 text-center bg-gray-100 flex flex-col items-center justify-center gap-4 mx-auto mt-10 rounded-lg w-[50%]"
+    >
+      <h1 class="text-3xl font-bold mb-4">Login Page</h1>
+      <p class="text-lg mb-6">This is the login page.</p>
+
+      <form
+        action="/login"
+        method="POST"
+        class="flex flex-col items-center gap-4 border border-gray-300 rounded-lg p-6 bg-white shadow-md"
+      >
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter Email"
+          required
+          class="border border-gray-300 rounded-lg p-2 w-64"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="border border-gray-300 rounded-lg p-2 w-64"
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Login
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "error-debugging",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./views/css/input.css -o ./public/css/output.css --watch",
+    "start": "concurrently \"nodemon app\" \"npm run tailwind\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14",
+    "postcss": "^8.5.9",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.2.2"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.1.1",
+    "mongoose": "^9.4.1",
+    "mysql2": "^3.22.0"
+  },
+  "keywords": []
+}
