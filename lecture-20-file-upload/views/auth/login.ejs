@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <%- include("../partials/_head") %>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <body class="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+
+    <div class="w-full max-w-3xl grid grid-cols-2 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+
+      <!-- Left panel -->
+      <div class="relative bg-[#0f1117] p-12 flex flex-col justify-between overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-purple-900/20 blur-2xl"></div>
+        <div class="absolute -bottom-16 -left-10 w-48 h-48 rounded-full bg-blue-900/20 blur-2xl"></div>
+
+        <!-- Logo -->
+        <div class="relative z-10">
+          <div class="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center mb-5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="6" width="7" height="7" rx="2" fill="white"/>
+              <rect x="7" y="2" width="7" height="7" rx="2" fill="#a5b4fc" opacity="0.8"/>
+            </svg>
+          </div>
+          <p class="text-white text-sm font-medium tracking-wide">YourApp</p>
+        </div>
+
+        <!-- Tagline -->
+        <div class="relative z-10">
+          <h2 class="font-serif text-white text-3xl leading-snug mb-3 font-normal">
+            Everything you need,<br>
+            <em class="text-indigo-300 not-italic">all in one place.</em>
+          </h2>
+          <p class="text-gray-500 text-sm leading-relaxed font-light">
+            Streamline your workflow and collaborate with your team in real time.
+          </p>
+        </div>
+
+        <!-- Pills -->
+        <div class="relative z-10 flex gap-2 flex-wrap">
+          <span class="bg-[#1e2030] border border-[#2e3050] text-gray-400 text-xs px-3 py-1 rounded-full">Secure</span>
+          <span class="bg-[#1e2030] border border-[#2e3050] text-gray-400 text-xs px-3 py-1 rounded-full">Fast</span>
+          <span class="bg-[#1e2030] border border-[#2e3050] text-gray-400 text-xs px-3 py-1 rounded-full">Reliable</span>
+        </div>
+      </div>
+
+      <!-- Right panel -->
+      <div class="bg-white p-12 flex flex-col justify-center">
+        <div class="mb-7">
+          <h1 class="text-2xl font-medium text-gray-900 mb-1">Welcome back</h1>
+          <p class="text-sm text-gray-500">Sign in to continue to your account.</p>
+        </div>
+
+        <!-- Error messages -->
+        <% if (errorMessage && errorMessage.length > 0) { %>
+          <div class="bg-red-50 border border-red-200 rounded-lg p-3 mb-5">
+            <% errorMessage.forEach((msg) => { %>
+              <p class="text-sm text-red-700"><%= msg %></p>
+            <% }) %>
+          </div>
+        <% } %>
+
+        <form action="/login" method="POST" class="flex flex-col gap-4">
+          <!-- Email -->
+          <div>
+            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              value="<%= typeof oldInput !== 'undefined' ? oldInput.email : '' %>"
+              class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition"
+            />
+          </div>
+
+          <!-- Password -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs font-medium text-gray-400 uppercase tracking-wider">Password</label>
+              <a href="/forgot-password" class="text-xs text-indigo-600 hover:text-indigo-800">Forgot password?</a>
+            </div>
+            <input
+              type="password"
+              name="password"
+              placeholder="••••••••"
+              required
+              class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-gray-50 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2.5 rounded-lg transition mt-1"
+          >
+            Sign in
+          </button>
+        </form>
+
+        <div class="flex items-center gap-3 my-5">
+          <hr class="flex-1 border-gray-100" />
+          <span class="text-xs text-gray-300">or</span>
+          <hr class="flex-1 border-gray-100" />
+        </div>
+
+        <p class="text-center text-sm text-gray-500">
+          Don't have an account?
+          <a href="/signup" class="text-indigo-600 font-medium hover:underline">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
